@@ -1,0 +1,5 @@
+# Smart TV Pod - Core Dependencies
+# Tuân thủ nguyên tắc Edge-Centric & Tiết kiệm RAM cho Raspberry Pi Zero 2W (512MB RAM)
+
+edge-tts>=6.1.10
+

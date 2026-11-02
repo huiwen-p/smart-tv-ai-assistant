@@ -1,0 +1,175 @@
+[
+  {
+    "id": "watch_vtv1",
+    "description": "Xem trực tiếp kênh thời sự VTV1",
+    "samples": [
+      "bật vtv1",
+      "mở vtv1",
+      "cho ông xem thời sự",
+      "cho bà xem thời sự",
+      "đến giờ thời sự rồi",
+      "mở kênh thời sự",
+      "bật thời sự",
+      "xem thời sự",
+      "thời sự",
+      "bật kênh 1"
+    ],
+    "action": {
+      "type": "OPEN_VTV",
+      "channel": "vtv1"
+    },
+    "feedback": "Dạ, cháu đang bật thời sự VTV1 cho ông bà ạ."
+  },
+  {
+    "id": "listen_kinh_phat",
+    "description": "Nghe kinh Phật chọn lọc của bà",
+    "samples": [
+      "mở kinh phật",
+      "nghe kinh phật",
+      "bài giảng pháp",
+      "kinh chú đại bi",
+      "mở kinh cho bà"
+    ],
+    "action": {
+      "type": "YOUTUBE_SEARCH",
+      "default_query": "Kinh Chú Đại Bi Thích Trí Thoát"
+    },
+    "feedback": "Dạ, cháu mở kinh Phật cho bà nghe đây ạ."
+  },
+  {
+    "id": "youtube_search",
+    "description": "Tìm kiếm trên YouTube",
+    "patterns": [
+      "mở youtube tìm (?P<query>.+)",
+      "tìm (?P<query>.+) trên youtube",
+      "youtube tìm (?P<query>.+)",
+      "mở youtube (?P<query>.+)",
+      "bật youtube (?P<query>.+)",
+      "nghe (?P<query>.+)",
+      "xem (?P<query>.+)"
+    ],
+    "action": {
+      "type": "YOUTUBE_SEARCH"
+    },
+    "feedback": "Dạ, cháu đang tìm nội dung này trên YouTube ạ."
+  },
+  {
+    "id": "youtube_open",
+    "description": "Mở ứng dụng YouTube",
+    "samples": [
+      "mở youtube",
+      "bật youtube",
+      "vào youtube"
+    ],
+    "action": {
+      "type": "OPEN_APP",
+      "packages": ["com.google.android.youtube.tv", "com.google.android.youtube"]
+    },
+    "feedback": "Dạ, đang mở ứng dụng YouTube ạ."
+  },
+  {
+    "id": "volume_up",
+    "description": "Tăng âm lượng",
+    "samples": [
+      "tăng âm lượng",
+      "tăng âm",
+      "bật to lên",
+      "nói to lên",
+      "cho to lên",
+      "to tiếng lên",
+      "to lên"
+    ],
+    "action": {
+      "type": "KEYEVENT",
+      "key": "KEYCODE_VOLUME_UP",
+      "repeat": 3
+    },
+    "feedback": "Dạ, cháu đã tăng âm lượng rồi ạ."
+  },
+  {
+    "id": "volume_down",
+    "description": "Giảm âm lượng",
+    "samples": [
+      "giảm âm lượng",
+      "giảm âm",
+      "bật nhỏ lại",
+      "cho bé lại",
+      "nhỏ tiếng",
+      "nhỏ lại",
+      "bé lại"
+    ],
+    "action": {
+      "type": "KEYEVENT",
+      "key": "KEYCODE_VOLUME_DOWN",
+      "repeat": 3
+    },
+    "feedback": "Dạ, cháu đã giảm âm lượng rồi ạ."
+  },
+  {
+    "id": "media_play_pause",
+    "description": "Tạm dừng hoặc tiếp tục",
+    "samples": [
+      "tạm dừng",
+      "dừng lại",
+      "pause",
+      "tiếp tục",
+      "phát tiếp"
+    ],
+    "action": {
+      "type": "KEYEVENT",
+      "key": "KEYCODE_MEDIA_PLAY_PAUSE",
+      "repeat": 1
+    },
+    "feedback": "Dạ, đã gửi lệnh Tạm dừng / Tiếp tục phát."
+  },
+  {
+    "id": "nav_home",
+    "description": "Quay về màn hình chính",
+    "samples": [
+      "về trang chủ",
+      "về màn hình chính",
+      "trang chủ",
+      "màn hình chính",
+      "home"
+    ],
+    "action": {
+      "type": "KEYEVENT",
+      "key": "KEYCODE_HOME",
+      "repeat": 1
+    },
+    "feedback": "Dạ, đã quay về màn hình chính."
+  },
+  {
+    "id": "nav_back",
+    "description": "Quay lại màn hình trước",
+    "samples": [
+      "quay lại",
+      "trở lại",
+      "back"
+    ],
+    "action": {
+      "type": "KEYEVENT",
+      "key": "KEYCODE_BACK",
+      "repeat": 1
+    },
+    "feedback": "Dạ, đã quay lại màn hình trước."
+  },
+  {
+    "id": "tv_sleep",
+    "description": "Tắt màn hình / Đi ngủ",
+    "samples": [
+      "tắt tv",
+      "tắt màn hình",
+      "đi ngủ",
+      "ông đi ngủ đây",
+      "bà đi ngủ đây",
+      "nghỉ xem"
+    ],
+    "action": {
+      "type": "KEYEVENT",
+      "key": "KEYCODE_SLEEP",
+      "repeat": 1
+    },
+    "feedback": "Dạ, chúc ông bà ngủ ngon, cháu tắt TV đây ạ."
+  }
+]

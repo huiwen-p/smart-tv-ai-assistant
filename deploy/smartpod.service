@@ -1,0 +1,25 @@
+[Unit]
+Description=Smart TV Pod - Context-Aware Voice Assistant for Elderly People
+After=network-online.target sound.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=smartpod
+Group=smartpod
+WorkingDirectory=/opt/smart-tv-pod
+EnvironmentFile=/opt/smart-tv-pod/.env
+ExecStart=/opt/smart-tv-pod/venv/bin/python3 app.py --daemon
+Restart=always
+RestartSec=3s
+
+# Giới hạn an toàn tài nguyên phần cứng cho Raspberry Pi Zero 2W (512MB RAM)
+MemoryMax=150M
+CPUQuota=80%
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=smartpod
+
+[Install]
+WantedBy=multi-user.target
+
